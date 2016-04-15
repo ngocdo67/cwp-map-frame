@@ -14,7 +14,7 @@ body { margin:0; padding:0; }
 }
 .info {
     position: relative;
-    top: 150px;
+    top: 1px;
 }
 .info h4 {
     margin: 0 0 5px;
@@ -24,18 +24,19 @@ body { margin:0; padding:0; }
     float: left;
     width: 600px;
     height: 100%;
-    position: relative;
+    position: absolute;
     border: 1px solid #aaa;
 }
 
 #map {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     width: 600px;
     height: 100%;
 }
 .toolbar {
+    position: relative;
     float: left;
     width: 600px;
     margin-bottom: 10px;

@@ -4,9 +4,8 @@
 var tabnum = "0";
 // set up the map center and zoom level
 var map = L.map('map', {
-  center: [41.8, -72.6], // [41.5, -72.7] for Connecticut; [41.76, -72.67] for Hartford county or city
-  zoom: 9.8, // zoom 9 for Connecticut; 10 for Hartford county, 12 for Hartford city
-  zoomControl: false // add later to reposition
+  center: [41.85, -72.6], // [41.5, -72.7] for Connecticut; [41.76, -72.67] for Hartford county or city
+  zoom: 9.8 // zoom 9 for Connecticut; 10 for Hartford county, 12 for Hartford city
 });
 
 // customize link to view source code; add your own GitHub repository
@@ -33,8 +32,6 @@ var controlLayers = L.control.layers( null, null, {
 // REMOVE AFTER MAP CONSTRUCTION: optional Zoom Label (also in index.html)
 //L.control.zoomLabel().addTo(map);
 
-// optional: reposition zoom control other than default topleft
-L.control.zoom({position: "topright"}).addTo(map);
 
 /* BASELAYERS */
 var lightNoLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
@@ -171,7 +168,7 @@ info.update = function (props) {
 
 info.addTo(map);
 
-var legend = L.control({position: "topleft"});
+var legend = L.control({position: "bottomright"});
 
 legend.onAdd = function (map) {
   this._div = L.DomUtil.create('div', 'info legend');
